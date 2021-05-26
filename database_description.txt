@@ -1,0 +1,17 @@
+imdb:
+title, 
+rating, 
+year, 
+user_rating, 
+votes, 
+metascore, 
+img_url, 
+countries: array,
+languages: array,
+actors: array,
+genre: array,
+taglin: array
+description,
+director: array,
+runtime,
+imdb_url

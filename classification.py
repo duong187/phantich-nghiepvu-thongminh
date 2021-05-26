@@ -148,7 +148,8 @@ for i in range(len(criterions)):
     gs = GridSearchCV(estimator=tree,
                       param_grid=param_grid,
                       scoring='accuracy',
-                      cv=10)
+                      cv=10,
+                      return_train_score=True)
     gs = gs.fit(x_dummy, y)
     print_cv_results(gs, 'Decision Tree Regression Accuracy')
 
@@ -180,7 +181,8 @@ param_grid = [{'n_estimators': n_list,
 gs = GridSearchCV(estimator=forest,
                   param_grid=param_grid,
                   scoring='accuracy',
-                  cv=10)
+                  cv=10,
+                  return_train_score=True)
 gs = gs.fit(x_dummy, y)
 save_cv_results(gs, 'Random Forest Accuracy', 'rand-forest.txt')
 
@@ -195,7 +197,8 @@ for i in range(len(criterions)):
     gs = GridSearchCV(estimator=forest,
                       param_grid=param_grid,
                       scoring='accuracy',
-                      cv=10)
+                      cv=10,
+                      return_train_score=True)
     gs = gs.fit(x_dummy, y)
     print_cv_results(gs, 'Random Forest Accuracy')
 

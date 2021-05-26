@@ -82,7 +82,7 @@ for index, row in df.iterrows():
         country = np.nan
     df.at[index, 'country'] = country
 
-remove movies with country with low frequency in dataset
+#remove movies with country with low frequency in dataset
 df = df.groupby('country').filter(lambda x: len(x) >= 5)
 
 
